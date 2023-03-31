@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections with database</title>
+    
+</head>
+<body>
+    <center>
+        <fieldset style="color: darkblue; border:3px solid darkblue; height: 300px; width: 300px ">
+        <legend><h3 style="color: darkblue;"><i>Student Details</i></h3></legend>
+        <table>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <tr><th>Student Name: </th><td><input type="text" name="sName" placeholder="Student Name"></td></tr>
+                <tr><th>Student Phno: </th><td><input type="text" name="sPhno" placeholder="Student phno"></td></tr>
+                <tr><th>Student Reg No: </th><td><input type="text" name="sRollno" placeholder="Student Register Num"></td></tr>
+                <tr><th><input type="submit"></th></tr>
+            </form>
+            {% for i in messages %}
+                <h3 style="color: red;">{{i}}</h3>
+            {% endfor %}
+        </table>
+        </fieldset>
+    </center>
+</body>
+</html>
